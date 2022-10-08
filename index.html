@@ -6,12 +6,19 @@
   <style>
     html {
       background-color: lightblue;
+      padding: 1rem 2rem;
+    }
+    
+    ul {
+      margin: 0;
+      padding: 0;
     }
 
     li {
       list-style-type: none;
       margin-bottom: 1rem;
     }
+
     .favicon {
       height: 32px;
       width: 32px;
@@ -25,18 +32,32 @@
     a.flex-row {
       align-items: center;
     }
+
+    #collections {
+      margin-right: 2rem;
+    }
   </style>
 </head>
 
 <body>
-  <h1>Hello multiverse!</h1>
+  <h1>Hello!</h1>
+
+  <h2>Contact info</h2>
+  <ul>
+    <li>
+      <a href="mailto:hello@joshmleslie.com" target="_blank" rel="noreferrer">Email</a>
+    </li>
+    <li>
+      <a href="tel:2037671098" target="_blank" rel="noreferrer">Phone</a>
+    </li>
+  </ul>
 
   <h2>Some of my work</h2>
   <div class="flex-row">
-    <ul>
+    <ul id="collections">
       <h3>Collections</h3>
       <li>
-        <a class="flex-row" href="https://stackblitz.com/@JoshMLeslie">
+        <a class="flex-row" href="https://stackblitz.com/@JoshMLeslie" target="_blank" rel="noreferrer">
           <img class="favicon"
             src="https://c.staticblitz.com/assets/favicon-editor-675989317f34707a17fe9d649da3609d70f6f8abc9546445389238ddd570a1d4.png" />
           Stackblitz
@@ -44,14 +65,14 @@
       </li>
 
       <li>
-        <a class="flex-row" href="https://www.github.com/joshmleslie">
+        <a class="flex-row" href="https://www.github.com/joshmleslie" target="_blank" rel="noreferrer">
           <img class="favicon" src="https://github.com/favicon.ico" />
           Github
         </a>
       </li>
 
       <li>
-        <a class="flex-row" href="https://www.gitlab.com/joshmleslie">
+        <a class="flex-row" href="https://www.gitlab.com/joshmleslie" target="_blank" rel="noreferrer">
           <img class="favicon" src="https://gitlab.com/favicon.ico" />
           Gitlab
         </a>
@@ -61,7 +82,7 @@
     <ul>
       <h3>Public Work</h3>
       <li>
-        <a class="flex-row" href="https://sell.fashionphile.com/sell-your-bag">
+        <a class="flex-row" href="https://sell.fashionphile.com/sell-your-bag" target="_blank" rel="noreferrer">
           <img class="favicon" src="https://www.fashionphile.com/favicon.ico" />
           Fashionphile
         </a>
@@ -69,7 +90,7 @@
       </li>
 
       <li>
-        <a class="flex-row" href="https://opensourcemedicalsupplies.org/library">
+        <a class="flex-row" href="https://opensourcemedicalsupplies.org/library" target="_blank" rel="noreferrer">
           <img class="favicon" src="https://opensourcemedicalsupplies.org/favicon.ico" />
           Open Source Medical Supplies, Library
         </a>
@@ -77,7 +98,7 @@
       </li>
 
       <li>
-        <a class="flex-row" href="newyorkfed.org/markets/desk-operations/ambs">
+        <a class="flex-row" href="newyorkfed.org/markets/desk-operations/ambs" target="_blank" rel="noreferrer">
           <img class="favicon" src="https://newyorkfed.org/favicon.ico" />
           New York Federal Reserve
         </a>
