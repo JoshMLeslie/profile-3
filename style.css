@@ -1,0 +1,58 @@
+html {
+    background-color: lightblue;
+    padding: 1rem 2rem;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  a:hover {
+    opacity: 0.5;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  .favicon {
+    height: 32px;
+    width: 32px;
+    margin-right: 1rem;
+  }
+
+  .flex-row {
+    display: flex;
+  }
+
+  a.flex-row {
+    align-items: center;
+  }
+
+  p.flex-row {
+    margin-left: 3rem;
+  }
+
+  #collections {
+    margin-right: 2rem;
+  }
+
+  iframe#resume {
+    width: 100%;
+    max-width: 850px;
+    min-height: 500px;
+  }
