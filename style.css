@@ -60,3 +60,21 @@ html {
   .calendly-overlay .calendly-popup {
     max-height: 720px;
   }
+
+nav {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid gray;
+    margin-top: -1rem;
+}
+
+nav li a {
+    min-height: 2rem;
+    padding: 0.5rem 1rem;
+    background: white;
+    border-radius: 0.5rem;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
