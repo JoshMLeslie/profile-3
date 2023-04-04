@@ -14,20 +14,24 @@
 </head>
 
 <body>
-  <h1>Hello!</h1>
-  <p>Welcome to my intentionally low-effort site</p>
-  <h2>Contact info</h2>
-  <ul>
-    <li>
-      <a href="mailto:hello@joshmleslie.com" target="_blank" rel="noreferrer">Email</a>
-    </li>
-    <li>
-      <a href="tel:2037671098" target="_blank" rel="noreferrer">Phone</a>
-    </li>
-     <li>
-      <a href="/calendly" target="_blank" rel="noreferrer">Calendly</a>
-    </li>
-  </ul>
+  <nav class="navbar">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/resume">Resume</a></li>
+      <li><a href="/calendly">Calendly</a></li>
+    </ul>
+    <ul id="contact-info">
+      <li>
+        <a href="mailto:hello@joshmleslie.com" target="_blank" rel="noreferrer" aria-label="email">Hello@JoshMLeslie.com</a>
+      </li>
+      <li>
+        <a href="tel:2037671098" target="_blank" rel="noreferrer" aria-label="phone">+1-203-767-1098</a>
+      </li>
+    </ul>
+  </nav>
+  <h1 class="header">Josh M Leslie</h1>
+  <h2 class="header">Hello and welcome!</h2>
+  <h3 class="header">I spend my time at work or relaxing, not making this website pretty</h3>
 
   <h2>Some of my work</h2>
   <div class="flex-row">
@@ -77,14 +81,11 @@
           <img class="favicon" src="https://opensourcemedicalsupplies.org/favicon.ico" />
           Open Source Medical Supplies, Library
         </a>
-        <p>Sole frontend engineer + UI designer. UI designed in Figma, React app crammed into Wordpress</p>
+        <p>Sole frontend engineer + UI designer. Figma, React, Google Cloud</p>
       </li>
     </ul>
   </div>
 
-  <h2>Resume</h2>
-  <p>Last updated: 2023/04/03</p>
-  <iframe id="resume" src="https://drive.google.com/file/d/1Pe7iKadqxunirKKY0yieSA7bnewKyVud/preview" allow="autoplay"></iframe>
 </body>
 
 </html>

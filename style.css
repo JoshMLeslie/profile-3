@@ -1,79 +1,120 @@
 html {
-    background-color: lightblue;
-    padding: 1rem 2rem;
-  }
+	background-color: lightblue;
+	padding: 1rem 2rem;
+}
 
-  body {
-    margin: 0;
-  }
+body {
+	margin: 0;
+}
 
-  a:hover {
-    opacity: 0.5;
-  }
+a:hover {
+	opacity: 0.5;
+}
 
-  ul {
-    margin: 0;
-    padding: 0;
-  }
+a {
+  text-decoration: none;
+  font-family: sans-serif;
+}
 
-  li {
-    list-style-type: none;
-    margin-bottom: 1rem;
-  }
+ul {
+	margin: 0;
+	padding: 0;
+}
 
-  h2 {
-    margin-bottom: 1rem;
-  }
+li {
+	list-style-type: none;
+	margin-bottom: 1rem;
+}
 
-  h3 {
-    margin-top: 0;
-  }
+h2 {
+	margin-bottom: 1rem;
+}
 
-  .favicon {
-    height: 32px;
-    width: 32px;
-    margin-right: 1rem;
-  }
+h3 {
+	margin-top: 0;
+}
 
-  .flex-row {
-    display: flex;
-  }
+.favicon {
+	height: 32px;
+	width: 32px;
+	margin-right: 1rem;
+}
 
-  a.flex-row {
-    align-items: center;
-  }
+.flex-row {
+	display: flex;
+}
 
-  p.flex-row {
-    margin-left: 3rem;
-  }
+a.flex-row {
+	align-items: center;
+}
 
-  #collections {
-    margin-right: 2rem;
-  }
+p.flex-row {
+	margin-left: 3rem;
+}
 
-  iframe#resume {
-    width: 100%;
-    max-width: 850px;
-    min-height: 500px;
-  }
+#collections {
+	margin-right: 2rem;
+}
 
-  .calendly-overlay .calendly-popup {
-    max-height: 720px;
-  }
+.calendly-overlay .calendly-popup {
+	max-height: 720px;
+}
 
 nav {
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    border-bottom: 2px solid gray;
+	height: 4rem;
+	display: flex;
+	align-items: center;
+	border-bottom: 2px solid gray;
 }
 
 nav li a {
-    min-height: 2rem;
-    padding: 0.5rem 1rem;
-    background: white;
-    border-radius: 0.5rem;
-    border-color: black;
-    border-width: 2px;
-    border-style: solid;
+	min-height: 2rem;
+	padding: 0.5rem 1rem;
+	background: white;
+	border-radius: 0.5rem;
+	border-color: black;
+	border-width: 2px;
+	border-style: solid;
+}
+
+nav.navbar {
+  justify-content: space-between;
+}
+
+nav.navbar ul {
+	display: flex;
+	gap: 1rem;
+}
+
+#resume-page,
+#resume-page body,
+iframe#resume {
+  height: 100%;
+}
+
+#resume-container {
+  display: flex;
+  justify-content: center;
+  height: calc(100% - 3rem - 66px);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#contact-info {
+  display: flex;
+  gap: 1rem;
+}
+
+iframe#resume {
+	width: 100%;
+	max-width: 850px;
+	min-height: 500px;
+}
+
+.header {
+  text-align: center;
+}
+
+h1.header {
+  font-family: sans-serif;
 }
