@@ -1,6 +1,7 @@
 html {
 	background-color: lightblue;
 	padding: 1rem 2rem;
+	font-family: sans-serif;
 }
 
 body {
@@ -61,10 +62,11 @@ p.flex-row {
 }
 
 nav {
-	height: 4rem;
+	min-height: 4rem;
 	display: flex;
 	align-items: center;
 	border-bottom: 2px solid gray;
+	justify-content: space-between;
 }
 
 nav li a {
@@ -77,13 +79,18 @@ nav li a {
 	border-style: solid;
 }
 
-nav.navbar {
-  justify-content: space-between;
-}
-
-nav.navbar ul {
+nav ul {
 	display: flex;
 	gap: 1rem;
+}
+
+@media screen and (max-width: 777px) {
+	nav {
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin-bottom: 0.25rem;
+	}
 }
 
 #resume-page,
