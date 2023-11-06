@@ -8,13 +8,19 @@ body {
 	margin: 0;
 }
 
-a:hover {
-	opacity: 0.5;
-}
-
 a {
   text-decoration: none;
   font-family: sans-serif;
+	color: black;
+}
+
+a:not(.this-page):hover {
+	opacity: 0.5;
+}
+
+a.this-page {
+	background: lightblue;
+	cursor: grabbing;
 }
 
 ul {
