@@ -1,277 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
+		<title>Josh M Leslie</title>
 
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Calendly badge widget begin -->
+		<link
+			rel="stylesheet"
+			href="https://assets.calendly.com/assets/external/widget.css"
+		/>
+		<script
+			src="https://assets.calendly.com/assets/external/widget.js"
+			type="text/javascript"
+			async
+		></script>
+		<script type="text/javascript">
+			window.onload = () => {
+				Calendly.initBadgeWidget({
+					url: 'https://calendly.com/joshmleslie',
+					text: 'Schedule time',
+					color: '#0069ff',
+					textColor: '#ffffff',
+					branding: true,
+				});
+			};
+		</script>
+		<!-- Calendly badge widget end -->
 
-	<title>Josh M Leslie</title>
+		<link rel="stylesheet" href="./style.css" />
 
-	<!-- Calendly badge widget begin -->
-	<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
-	<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-	<script
-		type="text/javascript">window.onload = () => { Calendly.initBadgeWidget({ url: 'https://calendly.com/joshmleslie', text: 'Schedule time', color: '#0069ff', textColor: '#ffffff', branding: true }); }</script>
-	<!-- Calendly badge widget end -->
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 0;
+			}
 
-	<link rel="stylesheet" href="./style.css">
+			#contribution-table-container {
+				padding: 1rem;
+				background: linear-gradient(0deg, #2a4858, #58b913);
+				width: fit-content;
+			}
 
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			margin: 0;
-			padding: 0;
-		}
+			table {
+				border-collapse: collapse;
+				margin-top: 1rem;
+				margin-left: 3rem;
+			}
 
-		#contribution-table-container {
-			padding: 1rem;
-			background: linear-gradient(0deg, #2a4858, #58b913);
-			width: fit-content;
-		}
+			td {
+				cursor: pointer;
+				border: 1px solid #ddd;
+				padding: 10px;
+				text-align: center;
+			}
 
-		table {
-			border-collapse: collapse;
-			margin-top: 1rem;
-			margin-left: 3rem;
-		}
+			th {
+				background-color: #f2f2f2;
+			}
 
-		td {
-			cursor: pointer;
-			border: 1px solid #ddd;
-			padding: 10px;
-			text-align: center;
-		}
+			.month-header {
+				border: none;
+				position: absolute;
+				transform: rotate(270deg) translate(-110px, -32px);
+				transform-origin: left;
+			}
 
-		th {
-			background-color: #f2f2f2;
-		}
+			tbody tr:first-of-type td {
+				position: relative;
+				transform: unset;
+				left: 0;
+			}
+		</style>
+	</head>
 
-		.month-header {
-			border: none;
-			position: absolute;
-			transform: rotate(270deg) translate(-110px, -32px);
-			transform-origin: left;
-		}
+	<body>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/resume">Resume</a></li>
+				<li><a href="/resume-history">Resume History</a></li>
+				<li><a class="this-page" href="/contributions">Git Contrib</a></li>
+				<li><a href="/calendly">Calendly</a></li>
+				<li><a href="http://wcc.joshmleslie.com">World Clock</a></li>
+			</ul>
+			<ul id="contact-info">
+				<li>
+					<a
+						href="mailto:dm@joshmleslie.com"
+						target="_blank"
+						rel="noreferrer"
+						aria-label="email"
+						>Hello@JoshMLeslie.com</a
+					>
+				</li>
+				<li>
+					<a
+						href="tel:2037671098"
+						target="_blank"
+						rel="noreferrer"
+						aria-label="phone"
+						>+1-203-767-1098</a
+					>
+				</li>
+			</ul>
+		</nav>
+		<h1 class="header">Gitlab Contributions</h1>
+		<p>Takes a sec to load</p>
+		<div id="contribution-table-container">
+			<table>
+				<thead>
+					<tr>
+						<th>S</th>
+						<th>M</th>
+						<th>T</th>
+						<th>W</th>
+						<th>T</th>
+						<th>F</th>
+						<th>S</th>
+					</tr>
+				</thead>
+				<tbody id="calendar-body">
+					<!-- JavaScript will populate here -->
+				</tbody>
+			</table>
+		</div>
+		<h2>EOF</h2>
 
-		tbody tr:first-of-type td {
-			position: relative;
-			transform: unset;
-			left: 0;
-		}
-	</style>
-</head>
+		<script>
+			let allContributions = {};
 
-<body>
-	<nav>
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/resume">Resume</a></li>
-			<li><a href="/resume-history">Resume History</a></li>
-			<li><a class="this-page" href="/contributions">Git Contrib</a></li>
-			<li><a href="/calendly">Calendly</a></li>
-			<li><a href="http://wcc.joshmleslie.com">World Clock</a></li>
-		</ul>
-		<ul id="contact-info">
-			<li>
-				<a href="mailto:dm@joshmleslie.com" target="_blank" rel="noreferrer"
-					aria-label="email">Hello@JoshMLeslie.com</a>
-			</li>
-			<li>
-				<a href="tel:2037671098" target="_blank" rel="noreferrer" aria-label="phone">+1-203-767-1098</a>
-			</li>
-		</ul>
-	</nav>
-	<h1 class="header">Gitlab Contributions</h1>
-	<p>Takes a sec to load</p>
-	<div id="contribution-table-container">
-		<table>
-			<thead>
-				<tr>
-					<th>S</th>
-					<th>M</th>
-					<th>T</th>
-					<th>W</th>
-					<th>T</th>
-					<th>F</th>
-					<th>S</th>
-				</tr>
-			</thead>
-			<tbody id="calendar-body">
-				<!-- JavaScript will populate here -->
-			</tbody>
-		</table>
-	</div>
-	<h2>EOF</h2>
-
-	<script>
-		let allContributions = {};
-
-		const doFetch = (page) =>
-			fetch(
-				'https://gitlab.com/api/v4/users/2360060/events?per_page=100&page=' +
-				page +
-				'&action=pushed',
-				{
-					headers: {
-						'PRIVATE-TOKEN': 'glpat-ENSFDh3xrnNxXquC4Fms', // it's a read-only token so _shrug_
-					},
-				}
-			)
-				.then(async ({ body }) => {
-					const reader = body.getReader();
-
-					// from MDN
-					return new ReadableStream({
-						start(controller) {
-							function push() {
-								reader.read().then(({ done, value }) => {
-									if (done) {
-										console.log('done', done);
-										controller.close();
-										return;
-									}
-									controller.enqueue(value);
-									push();
-								});
-							}
-
-							push();
+			const doFetch = (page) =>
+				fetch(
+					'https://gitlab.com/api/v4/users/2360060/events?per_page=100&page=' +
+						page +
+						'&action=pushed',
+					{
+						headers: {
+							'PRIVATE-TOKEN': 'glpat-ENSFDh3xrnNxXquC4Fms', // it's a read-only token so _shrug_
 						},
-					});
-				})
-				.then((stream) =>
-					// Respond with our stream
-					new Response(stream, {
-						headers: { 'Content-Type': 'text/html' },
-					}).text()
+					}
 				)
-				.then((result) => {
-					// Do things with result
-					const contributions = JSON.parse(result).reduce((acc, val) => {
-						const key = val.created_at.split('T')[0];
-						const count = val.push_data.commit_count;
-						if (acc[key]) {
-							acc[key] += count;
-						} else {
-							acc[key] = count;
-						}
-						return acc;
-					}, {});
+					.then(async ({body}) => {
+						const reader = body.getReader();
 
-					allContributions = { ...allContributions, ...contributions };
-				});
+						// from MDN
+						return new ReadableStream({
+							start(controller) {
+								function push() {
+									reader.read().then(({done, value}) => {
+										if (done) {
+											console.log('done', done);
+											controller.close();
+											return;
+										}
+										controller.enqueue(value);
+										push();
+									});
+								}
 
-		const generateCalendar = (contributionData) => {
-			const currentDate = new Date();
-			currentDate.setUTCHours(0, 0, 0, 0);
-			const oldestDate = new Date(
-				Math.min(
-					...Object.keys(contributionData).map((date) =>
-						new Date(date).getTime()
+								push();
+							},
+						});
+					})
+					.then((stream) =>
+						// Respond with our stream
+						new Response(stream, {
+							headers: {'Content-Type': 'text/html'},
+						}).text()
 					)
-				)
-			);
+					.then((result) => {
+						// Do things with result
+						const contributions = JSON.parse(result).reduce((acc, val) => {
+							const key = val.created_at.split('T')[0];
+							const count = val.push_data.commit_count;
+							if (acc[key]) {
+								acc[key] += count;
+							} else {
+								acc[key] = count;
+							}
+							return acc;
+						}, {});
 
-			// https://colordesigner.io/gradient-generator
-			const GRADIENTS = [
-				'#58b913',
-				'#3eb52c',
-				'#18b03c',
-				'#00ac4a',
-				'#00a655',
-				'#00a15f',
-				'#009b68',
-				'#00956f',
-				'#008f75',
-				'#00897a',
-				'#00837c',
-				'#007c7e',
-				'#00767e',
-				'#006f7c',
-				'#006979',
-				'#006275',
-				'#005b6f',
-				'#0d5568',
-				'#204e61',
-				'#2a4858',
-			];
+						allContributions = {...allContributions, ...contributions};
+					});
 
-			function addMonthHeader(currentDatePointer, tbody) {
-				const monthHeader = document.createElement('tr');
-				const monthCell = document.createElement('td');
-				monthCell.colSpan = 7;
-				monthCell.classList.add('month-header');
-				monthCell.textContent = currentDatePointer.toLocaleString('default', {
-					month: 'long',
-					year: 'numeric',
+			const generateCalendar = (contributionData) => {
+				const currentDate = new Date();
+				currentDate.setUTCHours(0, 0, 0, 0);
+				const oldestDate = new Date(
+					Math.min(
+						...Object.keys(contributionData).map((date) =>
+							new Date(date).getTime()
+						)
+					)
+				);
+
+				// https://colordesigner.io/gradient-generator
+				const GRADIENTS = [
+					'#58b913',
+					'#3eb52c',
+					'#18b03c',
+					'#00ac4a',
+					'#00a655',
+					'#00a15f',
+					'#009b68',
+					'#00956f',
+					'#008f75',
+					'#00897a',
+					'#00837c',
+					'#007c7e',
+					'#00767e',
+					'#006f7c',
+					'#006979',
+					'#006275',
+					'#005b6f',
+					'#0d5568',
+					'#204e61',
+					'#2a4858',
+				];
+
+				function addMonthHeader(currentDatePointer, tbody) {
+					const monthHeader = document.createElement('tr');
+					const monthCell = document.createElement('td');
+					monthCell.colSpan = 7;
+					monthCell.classList.add('month-header');
+					monthCell.textContent = currentDatePointer.toLocaleString('default', {
+						month: 'long',
+						year: 'numeric',
+					});
+					monthHeader.appendChild(monthCell);
+					tbody.appendChild(monthHeader);
+				}
+
+				function formatDate(date) {
+					return date.toISOString().split('T')[0];
+				}
+
+				const tbody = document.getElementById('calendar-body');
+				let currentDatePointer = new Date(currentDate);
+
+				addMonthHeader(currentDatePointer, tbody);
+
+				let monthGradient = 0;
+				let week = 1;
+				while (currentDatePointer >= oldestDate) {
+					const row = document.createElement('tr');
+					let formattedDate = formatDate(currentDatePointer);
+
+					for (let day = 0; day < 7; day++) {
+						const cell = document.createElement('td');
+
+						// pull contrib count from data
+						formattedDate = formatDate(currentDatePointer);
+						const contributionCount = contributionData[formattedDate] || 0;
+						cell.textContent = contributionCount;
+
+						cell.title = formattedDate;
+						if (contributionCount < GRADIENTS.length) {
+							cell.style.backgroundColor = GRADIENTS[contributionCount];
+						} else {
+							cell.style.color = 'white';
+							cell.style.backgroundColor = GRADIENTS[GRADIENTS.length - 1];
+						}
+
+						// set cell date attr for ref
+						cell.setAttribute('data-date', formattedDate);
+						row.appendChild(cell);
+
+						const day = currentDatePointer.getDate();
+						currentDatePointer.setDate(currentDatePointer.getDate() - 1);
+
+						if (formattedDate.slice(-2) === '01') {
+							break;
+						}
+					}
+
+					tbody.appendChild(row);
+
+					if (
+						formattedDate.slice(-2) === '01' &&
+						currentDatePointer >= oldestDate
+					) {
+						addMonthHeader(currentDatePointer, tbody);
+						monthGradient++;
+					}
+				}
+			};
+
+			doFetch(1)
+				.then(() => doFetch(2))
+				.then(() => doFetch(3))
+				.then(() => {
+					generateCalendar(allContributions);
 				});
-				monthHeader.appendChild(monthCell);
-				tbody.appendChild(monthHeader);
-			}
-
-			function formatDate(date) {
-				return date.toISOString().split('T')[0];
-			}
-
-			const tbody = document.getElementById('calendar-body');
-			let currentDatePointer = new Date(currentDate);
-
-			addMonthHeader(currentDatePointer, tbody);
-
-			let monthGradient = 0;
-			let week = 1;
-			while (currentDatePointer >= oldestDate) {
-				const row = document.createElement('tr');
-				let formattedDate = formatDate(currentDatePointer);
-
-				for (let day = 0; day < 7; day++) {
-					const cell = document.createElement('td');
-
-					// pull contrib count from data
-					formattedDate = formatDate(currentDatePointer);
-					const contributionCount = contributionData[formattedDate] || 0;
-					cell.textContent = contributionCount;
-
-					cell.title = formattedDate;
-					if (contributionCount < GRADIENTS.length) {
-						cell.style.backgroundColor = GRADIENTS[contributionCount];
-					} else {
-						cell.style.color = 'white';
-						cell.style.backgroundColor = GRADIENTS[GRADIENTS.length - 1];
-					}
-
-					// set cell date attr for ref
-					cell.setAttribute('data-date', formattedDate);
-					row.appendChild(cell);
-
-					const day = currentDatePointer.getDate();
-					currentDatePointer.setDate(currentDatePointer.getDate() - 1);
-
-					if (formattedDate.slice(-2) === '01') {
-						break;
-					}
-				}
-
-				tbody.appendChild(row);
-
-				if (
-					formattedDate.slice(-2) === '01' &&
-					currentDatePointer >= oldestDate
-				) {
-					addMonthHeader(currentDatePointer, tbody);
-					monthGradient++;
-				}
-			}
-		};
-
-		doFetch(1)
-			.then(() => doFetch(2))
-			.then(() => doFetch(3))
-			.then(() => {
-				generateCalendar(allContributions);
-			});
-	</script>
-</body>
-
+		</script>
+	</body>
 </html>

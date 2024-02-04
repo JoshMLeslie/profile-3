@@ -1,47 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<title>Josh M Leslie</title>
 
-<head>
-	<title>Josh M Leslie</title>
+		<!-- Calendly badge widget begin -->
+		<link
+			rel="stylesheet"
+			href="https://assets.calendly.com/assets/external/widget.css"
+		/>
+		<script
+			src="https://assets.calendly.com/assets/external/widget.js"
+			type="text/javascript"
+			async
+		></script>
+		<script type="text/javascript">
+			window.onload = () => {
+				Calendly.initBadgeWidget({
+					url: 'https://calendly.com/joshmleslie',
+					text: 'Schedule time',
+					color: '#0069ff',
+					textColor: '#ffffff',
+					branding: true,
+				});
+			};
+		</script>
+		<!-- Calendly badge widget end -->
 
-	<!-- Calendly badge widget begin -->
-	<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
-	<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-	<script
-		type="text/javascript">window.onload = () => { Calendly.initBadgeWidget({ url: 'https://calendly.com/joshmleslie', text: 'Schedule time', color: '#0069ff', textColor: '#ffffff', branding: true }); }</script>
-	<!-- Calendly badge widget end -->
+		<link rel="stylesheet" href="./style.css" />
+	</head>
 
-	<link rel="stylesheet" href="./style.css">
-</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/resume">Resume</a></li>
+				<li><a class="this-page" href="/resume-history">Resume History</a></li>
+				<li><a href="/contributions">Git Contrib</a></li>
+				<li><a href="/calendly">Calendly</a></li>
+				<li><a href="http://wcc.joshmleslie.com">World Clock</a></li>
+			</ul>
+			<ul id="contact-info">
+				<li>
+					<a
+						href="mailto:dm@joshmleslie.com"
+						target="_blank"
+						rel="noreferrer"
+						aria-label="email"
+						>Hello@JoshMLeslie.com</a
+					>
+				</li>
+				<li>
+					<a
+						href="tel:2037671098"
+						target="_blank"
+						rel="noreferrer"
+						aria-label="phone"
+						>+1-203-767-1098</a
+					>
+				</li>
+			</ul>
+		</nav>
+		<h1 class="header">Josh M Leslie</h1>
+		<h2 class="header">A history of my resume, via figma, circa 2020</h2>
 
-<body>
-	<nav>
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/resume">Resume</a></li>
-			<li><a class="this-page" href="/resume-history">Resume History</a></li>
-			<li><a href="/contributions">Git Contrib</a></li>
-			<li><a href="/calendly">Calendly</a></li>
-			<li><a href="http://wcc.joshmleslie.com">World Clock</a></li>
-		</ul>
-		<ul id="contact-info">
-			<li>
-				<a href="mailto:dm@joshmleslie.com" target="_blank" rel="noreferrer"
-					aria-label="email">Hello@JoshMLeslie.com</a>
-			</li>
-			<li>
-				<a href="tel:2037671098" target="_blank" rel="noreferrer" aria-label="phone">+1-203-767-1098</a>
-			</li>
-		</ul>
-	</nav>
-	<h1 class="header">Josh M Leslie</h1>
-	<h2 class="header">A history of my resume, via figma, circa 2020</h2>
-
-
-	<iframe style="border: 1px solid rgba(0, 0, 0, 0.1); display: flex; margin: 0 auto;" width="800" height="450"
-		src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FstMuUfVdHs11RxfL30ZmeA%2Fmain%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DBJD6oz9QMQ1IDfyk-1"
-		allowfullscreen></iframe>
-
-</body>
-
+		<iframe
+			style="
+				border: 1px solid rgba(0, 0, 0, 0.1);
+				display: flex;
+				margin: 0 auto;
+			"
+			width="800"
+			height="450"
+			src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FstMuUfVdHs11RxfL30ZmeA%2Fmain%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DBJD6oz9QMQ1IDfyk-1"
+			allowfullscreen
+		></iframe>
+	</body>
 </html>

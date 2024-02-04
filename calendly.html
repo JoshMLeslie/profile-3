@@ -1,49 +1,69 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Josh M Leslie</title>
-    <link rel="stylesheet" href="./style.css">
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    <style>
-      html, body {
-        height: 100%;
-      }
+	<head>
+		<title>Josh M Leslie</title>
+		<link rel="stylesheet" href="./style.css" />
+		<script
+			type="text/javascript"
+			src="https://assets.calendly.com/assets/external/widget.js"
+			async
+		></script>
+		<style>
+			html,
+			body {
+				height: 100%;
+			}
 
-      #loading-container {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: calc(100% - 66px);
-        width: 100%;
-        z-index: -1;
-      }
-    </style>
+			#loading-container {
+				position: absolute;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: calc(100% - 66px);
+				width: 100%;
+				z-index: -1;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/resume">Resume</a></li>
+				<li><a href="/resume-history">Resume History</a></li>
+				<li><a href="/contributions">Git Contrib</a></li>
+				<li><a class="this-page" href="/calendly">Calendly</a></li>
+				<li><a href="http://wcc.joshmleslie.com">World Clock</a></li>
+			</ul>
+			<ul id="contact-info">
+				<li>
+					<a
+						href="mailto:dm@joshmleslie.com"
+						target="_blank"
+						rel="noreferrer"
+						aria-label="email"
+						>Hello@JoshMLeslie.com</a
+					>
+				</li>
+				<li>
+					<a
+						href="tel:2037671098"
+						target="_blank"
+						rel="noreferrer"
+						aria-label="phone"
+						>+1-203-767-1098</a
+					>
+				</li>
+			</ul>
+		</nav>
 
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/resume">Resume</a></li>
-        <li><a href="/resume-history">Resume History</a></li>
-        <li><a href="/contributions">Git Contrib</a></li>
-        <li><a class="this-page" href="/calendly">Calendly</a></li>
-			  <li><a href="http://wcc.joshmleslie.com">World Clock</a></li>
-      </ul>
-      <ul id="contact-info">
-        <li>
-          <a href="mailto:dm@joshmleslie.com" target="_blank" rel="noreferrer" aria-label="email">Hello@JoshMLeslie.com</a>
-        </li>
-        <li>
-          <a href="tel:2037671098" target="_blank" rel="noreferrer" aria-label="phone">+1-203-767-1098</a>
-        </li>
-      </ul>
-    </nav>
-
-    <div id="loading-container">
-      <h2>Loading Calendar</h2>
-    </div>
-    <div class="calendly-inline-widget" data-url="https://calendly.com/joshmleslie" style="min-width:80vw;height:90vh;"></div>
-  </body>
+		<div id="loading-container">
+			<h2>Loading Calendar</h2>
+		</div>
+		<div
+			class="calendly-inline-widget"
+			data-url="https://calendly.com/joshmleslie"
+			style="min-width: 80vw; height: 90vh"
+		></div>
+	</body>
 </html>
