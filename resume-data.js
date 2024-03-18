@@ -70,7 +70,7 @@ const jobData = [{
 			description: 'COVID-19',
 			role: 'Survivor',
 			start: '2020.01',
-			end: 'Now'
+			end: '???'
 	},
 	url: 'https://www.cdc.gov/coronavirus/2019-ncov',
 	about: [
