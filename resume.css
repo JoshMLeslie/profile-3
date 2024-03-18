@@ -1,0 +1,107 @@
+#resume-page,
+#resume-page body {
+    height: 100%;
+}
+
+#resume-header {
+    padding: 2rem 1rem;
+    width: 100%;
+    border: 2px solid;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+#resume-header ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
+}
+
+#resume-container {
+    display: flex;
+    justify-content: space-between;
+    height: calc(100% - 3rem - 66px);
+    padding: 1rem;
+    border: 2px solid black;
+}
+
+#general-info {
+    border: 2px solid red;
+    width: 30%;
+}
+
+#job-history {
+    border: 2px solid blue;
+    width: 65%;
+    overflow: auto;
+    scrollbar-width: thin;
+}
+
+.job-data-child {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 1rem;
+}
+
+.job-data-child a {
+    font-style: italic;
+}
+
+.job-data-child p {
+    margin: 0;
+}
+
+.job-data-child:not(:last-of-type)::after {
+    content: "";
+    width: 90%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.25);
+    margin: 8px auto 0 auto;
+}
+
+.job-data-child ul li {
+    margin-bottom: 8px;
+}
+
+.job-data-child ul li:last-child {
+    margin-bottom: 0;
+}
+
+.job-data-child-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    row-gap: 8px;
+}
+
+
+.job-data-child-header div:first-child span:first-child {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.job-data-child-header div:first-child span:not(:first-of-type)::before {
+    content: "-";
+    margin-right: 8px;
+}
+
+.job-data-child-header div:nth-child(2) span:first-child::after {
+    content: "-";
+    margin-left: 8px;
+}
+
+.job-data-child-header div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.job-data-child-tech-used {
+    display: flex;
+    gap: 8px;
+}
