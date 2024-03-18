@@ -117,8 +117,6 @@ h1.header {
 	font-family: sans-serif;
 }
 
-/* printer settings */
-
 @media print {
 	.calendly-badge-widget {
 			display: none;

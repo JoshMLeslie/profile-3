@@ -147,3 +147,34 @@ nav {
     display: flex;
     gap: 8px;
 }
+
+#last-updated {
+	position: fixed;
+	bottom: 8px;
+	left: 8px;
+}
+
+@media print {
+    nav {
+        display: none;
+    }
+
+    div.job-data-child {
+        break-inside: avoid;
+    }
+
+    #resume-super,
+    #job-history-container {
+        min-height: unset;
+        overflow: visible;
+        margin-bottom: 5rem;
+    }
+
+    #job-history {
+        scrollbar-width: none;
+    }
+
+    #last-updated {
+        max-width: 50px;
+    }
+}
