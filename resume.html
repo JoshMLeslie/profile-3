@@ -1,90 +1,127 @@
 <!DOCTYPE html>
 <html lang="en" id="resume-page">
+	<head>
+		<title>Josh M Leslie</title>
 
-<head>
-    <title>Josh M Leslie</title>
+		<!-- Calendly badge widget begin -->
+		<link
+			rel="stylesheet"
+			href="https://assets.calendly.com/assets/external/widget.css"
+		/>
+		<script
+			src="https://assets.calendly.com/assets/external/widget.js"
+			type="text/javascript"
+			async
+		></script>
+		<script type="text/javascript">
+			window.onload = () => {
+				Calendly.initBadgeWidget({
+					url: 'https://calendly.com/joshmleslie',
+					text: 'Schedule time',
+					color: '#0069ff',
+					textColor: '#ffffff',
+					branding: true,
+				});
+			};
+		</script>
+		<!-- Calendly badge widget end -->
+		<link rel="stylesheet" href="./style.css" />
+		<link rel="stylesheet" href="./resume.css" />
+	</head>
 
-    <!-- Calendly badge widget begin -->
-    <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <script type="text/javascript">
-        window.onload = () => {
-            Calendly.initBadgeWidget({
-                url: 'https://calendly.com/joshmleslie',
-                text: 'Schedule time',
-                color: '#0069ff',
-                textColor: '#ffffff',
-                branding: true,
-            });
-        };
-    </script>
-    <!-- Calendly badge widget end -->
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./resume.css" />
-</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a class="this-page" href="/resume">Resume</a></li>
+				<li><a href="/resume-history">Resume History</a></li>
+				<li><a href="/contributions">Git Contrib</a></li>
+				<li><a href="/calendly">Calendly</a></li>
+				<li><a href="http://wcc.joshmleslie.com">World Clock</a></li>
+			</ul>
+			<ul id="contact-info">
+				<li>
+					<a
+						href="mailto:dm@joshmleslie.com"
+						target="_blank"
+						rel="noreferrer"
+						aria-label="email"
+						>Hello@JoshMLeslie.com</a
+					>
+				</li>
+				<li>
+					<a
+						href="tel:2037671098"
+						target="_blank"
+						rel="noreferrer"
+						aria-label="phone"
+						>+1-203-767-1098</a
+					>
+				</li>
+			</ul>
+		</nav>
+		<div id="resume-super">
+			<div id="resume-header">
+				<h1>Joshua Leslie</h1>
+				<ul>
+					<li style="min-width: fit-content">
+						<strong>UI / UX Engineer</strong>
+					</li>
+					<li>
+						Software Engineer passionate about UI, volunteering, design,
+						transportation, carpentry, metal work, embedded hardware, and more.
+					</li>
+				</ul>
+			</div>
+			<div id="resume-container">
+				<div id="general-info">
+					<div>
+						<h2>Education History</h2>
+						<h4>AppAcademy Bootcamp</h4>
 
-<body>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a class="this-page" href="/resume">Resume</a></li>
-            <li><a href="/resume-history">Resume History</a></li>
-            <li><a href="/contributions">Git Contrib</a></li>
-            <li><a href="/calendly">Calendly</a></li>
-            <li><a href="http://wcc.joshmleslie.com">World Clock</a></li>
-        </ul>
-        <ul id="contact-info">
-            <li>
-                <a href="mailto:dm@joshmleslie.com" target="_blank" rel="noreferrer"
-                    aria-label="email">Hello@JoshMLeslie.com</a>
-            </li>
-            <li>
-                <a href="tel:2037671098" target="_blank" rel="noreferrer" aria-label="phone">+1-203-767-1098</a>
-            </li>
-        </ul>
-    </nav>
-    <div id="resume-super">
+						<p>2018.03 to 2018.06</p>
 
-        <div id="resume-header">
-            <h1>Joshua Leslie</h1>
-            <ul>
-                <li style="min-width: fit-content;"><strong>UI / UX Engineer</strong></li>
-                <li>Software Engineer passionate about UI, volunteering, design, transportation, carpentry, metal work,
-                    embedded hardware, and more.</li>
-            </ul>
+						<p>Website Engineering</p>
+						<h4>The School of The Art Institute of Chicago</h4>
 
-        </div>
-        <div id="resume-container">
-            <div id="general-info">
-                <div>
-                    <h2>Education History</h2>
-                    <h4>AppAcademy Bootcamp</h4>
+						<p>2013.09 to 2016.12</p>
 
-                    <p>2018.03 to 2018.06</p>
+						<p>Bachelor of Fine Arts, Industrial Design</p>
+						<h4>Embry-Riddle Aeronautical University</h4>
 
-                    <p>Website Engineering</p>
-                    <h4>The School of The Art Institute of Chicago</h4>
+						<p>2011.09 to 2013.06</p>
 
-                    <p>2013.09 to 2016.12</p>
+						<p>Associate of Science, Engineering</p>
+					</div>
+				</div>
+				<div id="job-history-container">
+					<h2>Job History</h2>
+					<div id="job-history-filter-by-container">
+						<h4>Filter by</h4>
+                        <div>
+                            <ul>
+                                <li>
+                                    <button data-filterby='angular'>Angular</button>
+                                </li>
+                                <li>
+                                    <button data-filterby='figma'>Figma</button>
+                                </li>
+                                <li>
+                                    <button data-filterby='react'>React</button>
+                                </li>
+                                <li>
+                                    <button data-filterby='typescript'>TypeScript</button>
+                                </li>
+                            </ul>
+                            <button data-filterby="reset">Reset</button>
+                        </div>
+					</div>
+					<div id="job-history"></div>
+				</div>
+			</div>
+		</div>
 
-                    <p>Bachelor of Fine Arts, Industrial Design</p>
-                    <h4> Embry-Riddle Aeronautical University</h4>
-
-                    <p>2011.09 to 2013.06</p>
-
-                    <p>Associate of Science, Engineering</p>
-                </div>
-            </div>
-            <div id="job-history-container">
-                <h2>Job History</h2>
-                <div id="job-history">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <p id="last-updated">updated: 2024_03_17</p>
-    <script src="./resume-data.js" type="text/javascript"></script>
-</body>
-
+		<p id="last-updated">updated: 2024_03_17</p>
+		<script src="./resume-data.js" type="module" ></script>
+	</body>
 </html>
