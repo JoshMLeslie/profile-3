@@ -6,7 +6,7 @@
 }
 
 nav {
-	flex: 0;
+	flex: 0 25%;
 }
 
 #resume-super {
@@ -193,6 +193,15 @@ nav {
 	#general-info {
 		overflow-y: auto;
 		scrollbar-width: thin;
+	}
+}
+
+@media screen and (max-width: 675px) {
+	#general-info {
+		display: none;
+	}
+	#job-history-filter-by-container ul {
+		gap: 4px;
 	}
 }
 
