@@ -38,7 +38,17 @@
 				padding: 0;
 			}
 
-			#contribution-table-container {
+			#contribution-super {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1rem;
+				max-width: fit-content;
+				margin: 0 auto;
+			}
+
+			#gitlab-container,
+			#github-container {
+				min-width: 361.5px;
 				padding: 1rem;
 				background: linear-gradient(0deg, #2a4858, #58b913);
 				width: fit-content;
@@ -63,15 +73,18 @@
 
 			.month-header {
 				border: none;
-				position: absolute;
-				transform: rotate(270deg) translate(-110px, -32px);
-				transform-origin: left;
 			}
 
 			tbody tr:first-of-type td {
 				position: relative;
 				transform: unset;
 				left: 0;
+			}
+
+			thead {
+				position: sticky;
+				top: 1rem;
+				line-height: 2rem;
 			}
 		</style>
 	</head>
@@ -108,195 +121,80 @@
 				</li>
 			</ul>
 		</nav>
-		<h1 class="header">Gitlab Contributions</h1>
-		<p>Takes a sec to load</p>
-		<div id="contribution-table-container">
-			<table>
-				<thead>
-					<tr>
-						<th>S</th>
-						<th>M</th>
-						<th>T</th>
-						<th>W</th>
-						<th>T</th>
-						<th>F</th>
-						<th>S</th>
-					</tr>
-				</thead>
-				<tbody id="calendar-body">
-					<!-- JavaScript will populate here -->
-				</tbody>
-			</table>
+		<h1 class="header">Git Hub/Lab Contributions</h1>
+		<div id="contribution-super">
+			<div id="github-container">
+				<h2 class="header">Github</h2>
+				<p class="header">Hover for specific date</p>
+				<p id="loading-github" class="header">Loading</p>
+				<table>
+					<thead>
+						<tr>
+							<th>S</th>
+							<th>M</th>
+							<th>T</th>
+							<th>W</th>
+							<th>T</th>
+							<th>F</th>
+							<th>S</th>
+						</tr>
+					</thead>
+					<tbody id="calendar-body"></tbody>
+				</table>
+			</div>
+			<div id="gitlab-container">
+				<h2 class="header">Gitlab</h2>
+				<p class="header">Hover for specific date</p>
+				<p id="loading-gitlab" class="header">Loading</p>
+				<table>
+					<thead>
+						<tr>
+							<th>S</th>
+							<th>M</th>
+							<th>T</th>
+							<th>W</th>
+							<th>T</th>
+							<th>F</th>
+							<th>S</th>
+						</tr>
+					</thead>
+					<tbody id="calendar-body"></tbody>
+				</table>
+			</div>
 		</div>
-		<h2>EOF</h2>
+		<h2>EoF</h2>
 
-		<script>
-			let allContributions = {};
+		<script type="module">
+			import {fetchGitlabPaginated, generateCalendar} from './contributions.js';
 
-			const doFetch = (page) =>
-				fetch(
-					'https://gitlab.com/api/v4/users/2360060/events?per_page=100&page=' +
-						page +
-						'&action=pushed',
-					{
-						headers: {
-							'PRIVATE-TOKEN': 'glpat-ENSFDh3xrnNxXquC4Fms', // it's a read-only token so _shrug_
-						},
-					}
-				)
-					.then(async ({body}) => {
-						const reader = body.getReader();
-
-						// from MDN
-						return new ReadableStream({
-							start(controller) {
-								function push() {
-									reader.read().then(({done, value}) => {
-										if (done) {
-											console.log('done', done);
-											controller.close();
-											return;
-										}
-										controller.enqueue(value);
-										push();
-									});
-								}
-
-								push();
-							},
-						});
-					})
-					.then((stream) =>
-						// Respond with our stream
-						new Response(stream, {
-							headers: {'Content-Type': 'text/html'},
-						}).text()
-					)
-					.then((result) => {
-						// Do things with result
-						const contributions = JSON.parse(result).reduce((acc, val) => {
-							const key = val.created_at.split('T')[0];
-							const count = val.push_data.commit_count;
-							if (acc[key]) {
-								acc[key] += count;
-							} else {
-								acc[key] = count;
-							}
-							return acc;
-						}, {});
-
-						allContributions = {...allContributions, ...contributions};
-					});
-
-			const generateCalendar = (contributionData) => {
-				const currentDate = new Date();
-				currentDate.setUTCHours(0, 0, 0, 0);
-				const oldestDate = new Date(
-					Math.min(
-						...Object.keys(contributionData).map((date) =>
-							new Date(date).getTime()
-						)
-					)
-				);
-
-				// https://colordesigner.io/gradient-generator
-				const GRADIENTS = [
-					'#58b913',
-					'#3eb52c',
-					'#18b03c',
-					'#00ac4a',
-					'#00a655',
-					'#00a15f',
-					'#009b68',
-					'#00956f',
-					'#008f75',
-					'#00897a',
-					'#00837c',
-					'#007c7e',
-					'#00767e',
-					'#006f7c',
-					'#006979',
-					'#006275',
-					'#005b6f',
-					'#0d5568',
-					'#204e61',
-					'#2a4858',
-				];
-
-				function addMonthHeader(currentDatePointer, tbody) {
-					const monthHeader = document.createElement('tr');
-					const monthCell = document.createElement('td');
-					monthCell.colSpan = 7;
-					monthCell.classList.add('month-header');
-					monthCell.textContent = currentDatePointer.toLocaleString('default', {
-						month: 'long',
-						year: 'numeric',
-					});
-					monthHeader.appendChild(monthCell);
-					tbody.appendChild(monthHeader);
-				}
-
-				function formatDate(date) {
-					return date.toISOString().split('T')[0];
-				}
-
-				const tbody = document.getElementById('calendar-body');
-				let currentDatePointer = new Date(currentDate);
-
-				addMonthHeader(currentDatePointer, tbody);
-
-				let monthGradient = 0;
-				let week = 1;
-				while (currentDatePointer >= oldestDate) {
-					const row = document.createElement('tr');
-					let formattedDate = formatDate(currentDatePointer);
-
-					for (let day = 0; day < 7; day++) {
-						const cell = document.createElement('td');
-
-						// pull contrib count from data
-						formattedDate = formatDate(currentDatePointer);
-						const contributionCount = contributionData[formattedDate] || 0;
-						cell.textContent = contributionCount;
-
-						cell.title = formattedDate;
-						if (contributionCount < GRADIENTS.length) {
-							cell.style.backgroundColor = GRADIENTS[contributionCount];
-						} else {
-							cell.style.color = 'white';
-							cell.style.backgroundColor = GRADIENTS[GRADIENTS.length - 1];
-						}
-
-						// set cell date attr for ref
-						cell.setAttribute('data-date', formattedDate);
-						row.appendChild(cell);
-
-						const day = currentDatePointer.getDate();
-						currentDatePointer.setDate(currentDatePointer.getDate() - 1);
-
-						if (formattedDate.slice(-2) === '01') {
-							break;
-						}
-					}
-
-					tbody.appendChild(row);
-
-					if (
-						formattedDate.slice(-2) === '01' &&
-						currentDatePointer >= oldestDate
-					) {
-						addMonthHeader(currentDatePointer, tbody);
-						monthGradient++;
-					}
-				}
-			};
-
-			doFetch(1)
-				.then(() => doFetch(2))
-				.then(() => doFetch(3))
-				.then(() => {
-					generateCalendar(allContributions);
+			fetchGitlabPaginated(1)
+				.then((acc) => fetchGitlabPaginated(2, acc))
+				.then((acc) => fetchGitlabPaginated(3, acc))
+				.then((acc) => generateCalendar(acc, '#gitlab-container'))
+				.finally(() => {
+					const loader = document.querySelector('#loading-gitlab');
+					loader.style.display = 'none';
 				});
+		</script>
+		<script type="module" async>
+			import {fetchGithub, generateCalendar} from './contributions.js';
+
+			const contributionCalendar = await fetchGithub();
+
+			const githubContributions = contributionCalendar.weeks.reduce(
+				(acc, week) => {
+					week.contributionDays.forEach(
+						(day) => (acc[day.date] = day.contributionCount)
+					);
+					return acc;
+				},
+				{}
+			);
+
+			generateCalendar(githubContributions, '#github-container');
+
+			const loader = document.querySelector('#loading-github');
+			loader.style.display = 'none';
 		</script>
 	</body>
 </html>
