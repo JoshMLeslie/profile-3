@@ -18,11 +18,11 @@ a {
 	color: black;
 }
 
-a:not(.this-page):hover {
+nav a:not(.this-page):hover {
 	opacity: 0.5;
 }
 
-a.this-page {
+nav a.this-page {
 	background: lightblue;
 	cursor: grabbing;
 }

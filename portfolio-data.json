@@ -1,0 +1,34 @@
+[
+	{
+		"isTitle": true,
+		"text": "Professional Work"
+	},
+	{
+		"link": "https://opensourcemedicalsupplies.org",
+		"text": "Open Source Medical Supplies",
+		"imageUrl": "https://opensourcemedicalsupplies.org/wp-content/uploads/2020/06/library.jpg",
+		"imageAlt": "Open Source Medical Supplies"
+	},
+	{
+		"link": "https://www.newyorkfed.org/markets/desk-operations/repo",
+		"text": "Federal Reserve of New York City",
+		"imageUrl": "https://www.newyorkfed.org/medialibrary/media/images/v4/markets/landing_page_photo/MarketsRepo-GettyImages-1159395935-300.jpg?sc_lang=en&h=372&w=600&la=en&hash=2559ED10ABB3EB8D03D80105E33D3B15",
+		"imageAlt": "Federal Reserve of New York City"
+	},
+	{
+		"isTitle": true,
+		"text": "Personal Work"
+	},
+	{
+		"link": "http://wcc.joshmleslie.com",
+		"text": "World Clock Meeting Coordinator",
+		"imageUrl": "https://image.shutterstock.com/image-vector/clock-on-map-world-lag-260nw-247162324.jpg",
+		"imageAlt": "Clock banner"
+	},
+	{
+		"link": "https://stackblitz.com/@JoshMLeslie/collections/coherent",
+		"text": "Stackblitz Widgets",
+		"imageUrl": "https://stackblitz.com/_astro/stackblitz-logo-color.C8-mRlxl_ZM8j2i.svg",
+		"imageAlt": "Stackblitz examples"
+	}
+]
