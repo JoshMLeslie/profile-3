@@ -3,6 +3,5 @@
 	{"label": "Resume", "url": "/resume"},
 	{"label": "Resume History", "url": "/resume-history"},
 	{"label": "Git Contrib", "url": "/contributions"},
-	{"label": "Calendly", "url": "/calendly"},
-	{"label": "LinkedIn", "url": "https://www.linkedin.com/in/joshmleslie/"}
+	{"label": "Calendly", "url": "/calendly"}
 ]

@@ -13,8 +13,11 @@ const portfolioItemFactory = ({link, text, imageUrl, imageAlt, imgByHeight}) => 
 	portfolioItem.target = '_blank';
 	portfolioItem.className = 'portfolio-item';
 
-	const titleSpan = document.createElement('span');
-	titleSpan.textContent = text;
+	if (text) {
+		const titleSpan = document.createElement('span');
+		titleSpan.textContent = text;
+		portfolioItem.appendChild(titleSpan);
+	}
 
 	const image = document.createElement('img');
 	image.src = imageUrl;
@@ -23,7 +26,6 @@ const portfolioItemFactory = ({link, text, imageUrl, imageAlt, imgByHeight}) => 
 		image.className = 'image-by-height';
 	}
 
-	portfolioItem.appendChild(titleSpan);
 	portfolioItem.appendChild(image);
 
 	portfolioContainer.appendChild(portfolioItem);
