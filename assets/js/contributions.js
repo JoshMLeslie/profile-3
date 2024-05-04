@@ -171,6 +171,7 @@ export const fetchGithub = async () => {
 									weeks {
 										contributionDays {
 											contributionCount
+											date
 										}
 									}
 								}
