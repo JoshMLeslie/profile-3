@@ -110,7 +110,7 @@ export const fetchGitlabPaginated = async (page, acc = {}) => {
 			page,
 		{
 			headers: {
-				'PRIVATE-TOKEN': await gitReadData().read_gl_user,
+				'PRIVATE-TOKEN': (await gitReadData()).read_gl_user,
 			},
 		}
 	)
@@ -161,7 +161,7 @@ export const fetchGitlabPaginated = async (page, acc = {}) => {
 
 export const fetchGithub = async () => {
 	const headers = {
-		Authorization: `bearer ${await gitReadData().read_gh_user}`,
+		Authorization: `bearer ${(await gitReadData()).read_gh_user}`,
 	};
 	const body = {
 		query: `query {
