@@ -36,7 +36,7 @@ jobs:
         uses: jsdaniell/create-json@v1.2.3
         with:
           name: "gh-read.json"
-          json: '{"read_gh_user": "${{ secrets.GH_READ }}" }'
+          json: '{"read_gh_user": "${{ secrets.GH_READ }}", "read_gl_user": "${{ secrets.GL_READ }}" }'
           dir: 'assets/json'
       - name: Setup Pages
         uses: actions/configure-pages@v5
