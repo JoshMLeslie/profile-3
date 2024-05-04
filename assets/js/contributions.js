@@ -94,8 +94,7 @@ export const generateCalendar = (contributionData, contribMain) => {
 		// ELSE it's not the final month in the dataset,
 		// don't add a title.
 		const newMonth =
-			formattedDate.slice(-2) === '01' &&
-			currentDatePointer >= oldestDate;
+			formattedDate.slice(-2) === '01' && currentDatePointer >= oldestDate;
 		if (newMonth) {
 			addMonthHeader(currentDatePointer, tbody);
 			monthGradient++;
@@ -158,26 +157,21 @@ export const fetchGitlabPaginated = async (page, acc = {}) =>
 		});
 
 export const fetchGithub = async () => {
-	const token = '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'; // readonly
+	const data = await fetch('assets/json/gh-read.json').then(
+		(r) => r.json()
+	);
 	const headers = {
-		Authorization: `bearer ${token}`,
+		Authorization: `bearer ${data.read_gh_user}`,
 	};
 	const body = {
 		query: `query {
 						user(login: "JoshMLeslie") {
-							name
 							contributionsCollection {
 								contributionCalendar {
-									colors
-									totalContributions
 									weeks {
 										contributionDays {
-											color
 											contributionCount
-											date
-											weekday
 										}
-										firstDay
 									}
 								}
 							}
