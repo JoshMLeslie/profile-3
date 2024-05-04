@@ -29,7 +29,7 @@
 		</script>
 		<!-- Calendly badge widget end -->
 
-		<link rel="stylesheet" href="./style.css" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
 
 		<style>
 			body {
@@ -165,7 +165,7 @@
 		<h2>EoF</h2>
 
 		<script type="module">
-			import {fetchGitlabPaginated, generateCalendar} from './contributions.js';
+			import {fetchGitlabPaginated, generateCalendar} from './assets/js/contributions.js';
 
 			fetchGitlabPaginated(1)
 				.then((acc) => fetchGitlabPaginated(2, acc))
@@ -177,7 +177,7 @@
 				});
 		</script>
 		<script type="module" async>
-			import {fetchGithub, generateCalendar} from './contributions.js';
+			import {fetchGithub, generateCalendar} from './assets/js/contributions.js';
 
 			const contributionCalendar = await fetchGithub();
 
