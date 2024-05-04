@@ -1,13 +1,13 @@
-
 const portfolioContainer = document.querySelector('.portfolio-container');
 
-const titleFactory = ({ text }) => {
+const titleFactory = ({text}) => {
 	const title = document.createElement('h2');
 	title.textContent = text;
+	title.className = 'portfolio-title';
 	portfolioContainer.appendChild(title);
 };
 
-const portfolioItemFactory = ({link, text, imageUrl, imageAlt}) => {
+const portfolioItemFactory = ({link, text, imageUrl, imageAlt, imgByHeight}) => {
 	const portfolioItem = document.createElement('a');
 	portfolioItem.href = link;
 	portfolioItem.target = '_blank';
@@ -19,6 +19,9 @@ const portfolioItemFactory = ({link, text, imageUrl, imageAlt}) => {
 	const image = document.createElement('img');
 	image.src = imageUrl;
 	image.alt = imageAlt;
+	if (imgByHeight) {
+		image.className = 'image-by-height';
+	}
 
 	portfolioItem.appendChild(titleSpan);
 	portfolioItem.appendChild(image);
@@ -31,9 +34,7 @@ const portfolioItemFactory = ({link, text, imageUrl, imageAlt}) => {
 		.then((res) => res.json())
 		.then((data) => {
 			data.forEach((item) => {
-				item.isTitle ?
-					titleFactory(item) :
-					portfolioItemFactory(item);
+				item.isTitle ? titleFactory(item) : portfolioItemFactory(item);
 			});
 		})
 		.catch((error) => {

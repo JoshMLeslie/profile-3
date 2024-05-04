@@ -14,7 +14,7 @@
 			async
 		></script>
 		<script type="text/javascript">
-			window.onload = () => {
+			window.addEventListener('load', () => {
 				Calendly.initBadgeWidget({
 					url: 'https://calendly.com/joshmleslie',
 					text: 'Schedule time',
@@ -22,145 +22,28 @@
 					textColor: '#ffffff',
 					branding: true,
 				});
-			};
+			});
 		</script>
 		<!-- Calendly badge widget end -->
 
 		<link rel="stylesheet" href="./assets/css/style.css" />
 		<link rel="stylesheet" href="./assets/css/portfolio.css" />
+
+		<script
+			type="application/javascript"
+			src="assets/js/nav-factory.js"
+		></script>
+		<script block="render" defer type="application/javascript">
+			makeNav('/');
+		</script>
 	</head>
 
 	<body>
-		<nav>
-			<ul>
-				<li><a class="this-page" href="/">Home</a></li>
-				<li><a href="/portfolio">Portfolio</a></li>
-				<li><a href="/resume">Resume</a></li>
-				<li><a href="/resume-history">Resume History</a></li>
-				<li><a href="/contributions">Git Contrib</a></li>
-				<li><a href="/calendly">Calendly</a></li>
-				<li><a href="http://wcc.joshmleslie.com">World Clock</a></li>
-			</ul>
-			<ul id="contact-info">
-				<li>
-					<a
-						href="mailto:dm@joshmleslie.com"
-						target="_blank"
-						rel="noreferrer"
-						aria-label="email"
-						>Hello@JoshMLeslie.com</a
-					>
-				</li>
-				<li>
-					<a
-						href="tel:2037671098"
-						target="_blank"
-						rel="noreferrer"
-						aria-label="phone"
-						>+1-203-767-1098</a
-					>
-				</li>
-			</ul>
-		</nav>
 		<h1 class="header">Josh M Leslie</h1>
 		<h2 class="header">Hello and welcome!</h2>
+		<p class="header">Links open in a new tab</p>
 
-		<h2>Some of my work</h2>
 		<div class="portfolio-container"></div>
 		<script type="module" src="./assets/js/portfolio-factory.js"></script>
-		<div class="flex-row">
-			<ul id="collections">
-				<h3>Collections</h3>
-				<li>
-					<a
-						class="flex-row"
-						href="https://stackoverflow.com/users/9807140/josh-leslie"
-						target="_blank"
-						rel="noreferrer"
-					>
-						<img
-							class="favicon"
-							src="https://stackoverflow.com/favicon.ico"
-						/>Stack Overflow
-					</a>
-				</li>
-
-				<li>
-					<a
-						class="flex-row"
-						href="https://stackblitz.com/@JoshMLeslie"
-						target="_blank"
-						rel="noreferrer"
-					>
-						<img
-							class="favicon"
-							src="https://c.staticblitz.com/assets/favicon-editor-675989317f34707a17fe9d649da3609d70f6f8abc9546445389238ddd570a1d4.png"
-						/>
-						Stackblitz
-					</a>
-				</li>
-
-				<li>
-					<a
-						class="flex-row"
-						href="https://www.github.com/joshmleslie"
-						target="_blank"
-						rel="noreferrer"
-					>
-						<img class="favicon" src="https://github.com/favicon.ico" />
-						Github
-					</a>
-				</li>
-
-				<li>
-					<a
-						class="flex-row"
-						href="https://www.gitlab.com/joshmleslie"
-						target="_blank"
-						rel="noreferrer"
-					>
-						<img class="favicon" src="https://gitlab.com/favicon.ico" />
-						Gitlab
-					</a>
-				</li>
-			</ul>
-
-			<ul>
-				<h3>Paid Public Work</h3>
-				<li>
-					<a
-						class="flex-row"
-						href="https://sell.fashionphile.com/sell-your-bag"
-						target="_blank"
-						rel="noreferrer"
-					>
-						<img
-							class="favicon"
-							src="https://www.fashionphile.com/favicon.ico"
-						/>
-						Fashionphile
-					</a>
-					<p>High-end luxury goods recommerce platform</p>
-				</li>
-
-				<li>
-					<a
-						class="flex-row"
-						href="https://opensourcemedicalsupplies.org/library"
-						target="_blank"
-						rel="noreferrer"
-					>
-						<img
-							class="favicon"
-							src="https://opensourcemedicalsupplies.org/favicon.ico"
-						/>
-						Open Source Medical Supplies, Library
-					</a>
-					<p>
-						Sole frontend engineer + UI designer. Figma, React, Google Cloud
-					</p>
-				</li>
-			</ul>
-		</div>
 	</body>
 </html>

@@ -5,10 +5,6 @@
 	flex-direction: column;
 }
 
-nav {
-	flex: 0 25%;
-}
-
 #resume-super {
 	max-width: 1000px;
 	margin: 0 auto;

@@ -1,0 +1,54 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+#contribution-super {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	max-width: fit-content;
+	margin: 0 auto;
+}
+
+#gitlab-container,
+#github-container {
+	min-width: 361.5px;
+	padding: 1rem;
+	background: linear-gradient(0deg, #2a4858, #58b913);
+	width: fit-content;
+}
+
+table {
+	border-collapse: collapse;
+	margin-top: 1rem;
+	margin-left: 3rem;
+}
+
+td {
+	cursor: pointer;
+	border: 1px solid #ddd;
+	padding: 10px;
+	text-align: center;
+}
+
+th {
+	background-color: #f2f2f2;
+}
+
+.month-header {
+	border: none;
+}
+
+tbody tr:first-of-type td {
+	position: relative;
+	transform: unset;
+	left: 0;
+}
+
+thead {
+	position: sticky;
+	top: 1rem;
+	line-height: 2rem;
+}

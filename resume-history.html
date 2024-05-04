@@ -14,7 +14,7 @@
 			async
 		></script>
 		<script type="text/javascript">
-			window.onload = () => {
+			window.addEventListener('load', () => {
 				Calendly.initBadgeWidget({
 					url: 'https://calendly.com/joshmleslie',
 					text: 'Schedule time',
@@ -22,45 +22,22 @@
 					textColor: '#ffffff',
 					branding: true,
 				});
-			};
+			});
 		</script>
 		<!-- Calendly badge widget end -->
 
 		<link rel="stylesheet" href="./assets/css/style.css" />
+
+		<script
+			type="application/javascript"
+			src="assets/js/nav-factory.js"
+		></script>
+		<script block="render" defer type="application/javascript">
+			makeNav(window.location.pathname);
+		</script>
 	</head>
 
 	<body>
-		<nav>
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/portfolio">Portfolio</a></li>
-				<li><a href="/resume">Resume</a></li>
-				<li><a class="this-page" href="/resume-history">Resume History</a></li>
-				<li><a href="/contributions">Git Contrib</a></li>
-				<li><a href="/calendly">Calendly</a></li>
-				<li><a href="http://wcc.joshmleslie.com">World Clock</a></li>
-			</ul>
-			<ul id="contact-info">
-				<li>
-					<a
-						href="mailto:dm@joshmleslie.com"
-						target="_blank"
-						rel="noreferrer"
-						aria-label="email"
-						>Hello@JoshMLeslie.com</a
-					>
-				</li>
-				<li>
-					<a
-						href="tel:2037671098"
-						target="_blank"
-						rel="noreferrer"
-						aria-label="phone"
-						>+1-203-767-1098</a
-					>
-				</li>
-			</ul>
-		</nav>
 		<h1 class="header">Josh M Leslie</h1>
 		<h2 class="header">A history of my resume, via figma, circa 2020</h2>
 

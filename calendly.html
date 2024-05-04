@@ -2,12 +2,28 @@
 <html>
 	<head>
 		<title>Josh M Leslie</title>
-		<link rel="stylesheet" href="./assets/css/style.css" />
+
+		<!-- Calendly badge widget begin -->
+		<link
+			rel="stylesheet"
+			href="https://assets.calendly.com/assets/external/widget.css"
+		/>
 		<script
-			type="text/javascript"
 			src="https://assets.calendly.com/assets/external/widget.js"
+			type="text/javascript"
 			async
 		></script>
+		<!-- Calendly badge widget end -->
+
+		<link rel="stylesheet" href="./assets/css/style.css" />
+
+		<script
+			type="application/javascript"
+			src="assets/js/nav-factory.js"
+		></script>
+		<script block="render" defer type="application/javascript">
+			makeNav(window.location.pathname);
+		</script>
 		<style>
 			html,
 			body {
@@ -26,38 +42,6 @@
 		</style>
 	</head>
 	<body>
-		<nav>
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/portfolio">Portfolio</a></li>
-				<li><a href="/resume">Resume</a></li>
-				<li><a href="/resume-history">Resume History</a></li>
-				<li><a href="/contributions">Git Contrib</a></li>
-				<li><a class="this-page" href="/calendly">Calendly</a></li>
-				<li><a href="http://wcc.joshmleslie.com">World Clock</a></li>
-			</ul>
-			<ul id="contact-info">
-				<li>
-					<a
-						href="mailto:dm@joshmleslie.com"
-						target="_blank"
-						rel="noreferrer"
-						aria-label="email"
-						>Hello@JoshMLeslie.com</a
-					>
-				</li>
-				<li>
-					<a
-						href="tel:2037671098"
-						target="_blank"
-						rel="noreferrer"
-						aria-label="phone"
-						>+1-203-767-1098</a
-					>
-				</li>
-			</ul>
-		</nav>
-
 		<div id="loading-container">
 			<h2>Loading Calendar</h2>
 		</div>

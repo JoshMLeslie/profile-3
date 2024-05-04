@@ -16,6 +16,12 @@
 		"imageAlt": "Federal Reserve of New York City"
 	},
 	{
+		"link": "https://www.fashionphile.com",
+		"text": "Fashionphile Recommerce Platform",
+		"imageUrl": "assets/img/fp-logo.avif",
+		"imageAlt": "Fashionphile logo"
+	},
+	{
 		"isTitle": true,
 		"text": "Personal Work"
 	},
@@ -29,6 +35,27 @@
 		"link": "https://stackblitz.com/@JoshMLeslie/collections/coherent",
 		"text": "Stackblitz Widgets",
 		"imageUrl": "https://stackblitz.com/_astro/stackblitz-logo-color.C8-mRlxl_ZM8j2i.svg",
-		"imageAlt": "Stackblitz examples"
+		"imageAlt": "Stackblitz examples",
+		"imgByHeight": true
+	},
+	{
+		"link": "https://stackoverflow.com/users/9807140/josh-leslie",
+		"text": "Stackoverflow Profile",
+		"imageUrl": "https://stackoverflow.design/assets/img/logos/so/logo-stackoverflow.svg",
+		"imageAlt": "Stackoverflow user profile",
+		"imgByHeight": true
+	},
+	{
+		"link": "https://github.com/joshmleslie",
+		"text": "Github Profile",
+		"imageUrl": "https://github.githubassets.com/assets/GitHub-Logo-ee398b662d42.png",
+		"imageAlt": "Github user profile",
+		"imgByHeight": true
+	},
+	{
+		"link": "https://gitlab.com/joshmleslie",
+		"text": "Gitlab Profile",
+		"imageUrl": "https://images.ctfassets.net/xz1dnu24egyd/1jFYOufBZ1ib2PLP9YI45r/5f67fe4a4b32a0ff5e012cb35e3272f3/gitlab-logo-100.svg",
+		"imageAlt": "Gitlab user profile"
 	}
 ]

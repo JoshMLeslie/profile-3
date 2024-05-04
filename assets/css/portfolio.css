@@ -8,10 +8,6 @@
 	margin: 2rem auto;
 }
 
-.portfolio-container h2 {
-	margin: 0;
-}
-
 a.portfolio-item {
 	display: flex;
 	justify-content: center;
@@ -24,6 +20,7 @@ a.portfolio-item {
 	transition: opacity 0.3s ease, transform 0.3s ease;
 	border-radius: 8px;
 	overflow: hidden;
+	box-shadow: 4px 8px 8px 4px rgba(0,0,0,0.5);
 }
 
 a.portfolio-item:hover {
@@ -49,4 +46,21 @@ a.portfolio-item:hover span {
 a.portfolio-item img {
 	width: 100%;
 	height: auto;
+}
+
+a.portfolio-item img.image-by-height {
+	width: unset;
+	height: 128px;
+}
+
+.portfolio-title {
+	margin: 0;
+	padding-bottom: 8px;
+	width: 100%;
+	text-align: center;
+	border-bottom: 2px solid gray;
+}
+
+.portfolio-title:not(:first-of-type) {
+	margin-top: 2rem;
 }
