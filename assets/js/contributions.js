@@ -22,7 +22,7 @@ const GRADIENTS = [
 	'#2a4858',
 ];
 
-const gitReadData = fetch('assets/json/gh-read.json').then((r) => r.json());
+const gitReadData = async () => fetch('assets/json/gh-read.json').then((r) => r.json());
 
 function addMonthHeader(currentDatePointer, tbody) {
 	const monthHeader = document.createElement('tr');
@@ -110,7 +110,7 @@ export const fetchGitlabPaginated = async (page, acc = {}) => {
 			page,
 		{
 			headers: {
-				'PRIVATE-TOKEN': gitReadData.read_gl_user,
+				'PRIVATE-TOKEN': await gitReadData().read_gl_user,
 			},
 		}
 	)
@@ -161,7 +161,7 @@ export const fetchGitlabPaginated = async (page, acc = {}) => {
 
 export const fetchGithub = async () => {
 	const headers = {
-		Authorization: `bearer ${gitReadData.read_gh_user}`,
+		Authorization: `bearer ${await gitReadData().read_gh_user}`,
 	};
 	const body = {
 		query: `query {
