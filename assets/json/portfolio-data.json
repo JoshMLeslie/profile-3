@@ -53,10 +53,16 @@
 		"text": "Personal Work"
 	},
 	{
+		"link": "https://joshmleslie.github.io/usa-hsr/",
+		"text": "USA High-speed Rail Map",
+		"imageUrl": "https://internationalbanker.com/wp-content/uploads/2023/09/High-Speed-Train.png",
+		"imageAlt": "High speed rail project banner"
+	},
+	{
 		"link": "http://wcc.joshmleslie.com",
 		"text": "World Clock Meeting Coordinator",
 		"imageUrl": "https://image.shutterstock.com/image-vector/clock-on-map-world-lag-260nw-247162324.jpg",
-		"imageAlt": "Clock banner"
+		"imageAlt": "Clock project banner"
 	},
 	{
 		"link": "https://stackblitz.com/@JoshMLeslie/collections/coherent",
