@@ -34,6 +34,23 @@ const jobData = [
 	},
 	{
 		header: {
+			company: 'Gather Flora, Inc.',
+			description: 'Small flower-farm wholesale aggregator',
+			role: 'Fullstack Engineer',
+			start: '2021.11',
+			end: '2021.01',
+		},
+		url: 'https://www.gatherflora.com',
+		about: [
+			'Consulted to iron out onboarding system for future engineering hires',
+			'Streamlined local development setup documentation and installation process',
+		],
+		skills:
+			'React, Storybook, GCloud, JIRA',
+		type: 'C',
+	},
+	{
+		header: {
 			company: 'Dynepic, Inc.',
 			description: 'Learning Management System',
 			role: 'Fullstack Engineer',
