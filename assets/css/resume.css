@@ -192,6 +192,7 @@
 	}
 }
 
+/* mobile media queries and .mobile fallback */
 @media screen and (max-width: 675px) {
 	#general-info {
 		display: none;
@@ -199,6 +200,13 @@
 	#job-history-filter-by-container ul {
 		gap: 4px;
 	}
+}
+
+.mobile #general-info {
+	display: none;
+}
+.mobile #job-history-filter-by-container ul {
+	gap: 4px;
 }
 
 @media print {
