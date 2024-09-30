@@ -122,3 +122,9 @@ h1.header {
 			display: none;
 	}
 }
+
+#intro-text {
+	font-size: 18px;
+	max-width: 800px;
+	margin: 0 auto;
+}
