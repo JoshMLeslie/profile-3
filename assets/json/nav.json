@@ -1,7 +1,8 @@
 [
 	{"label": "Home", "url": "/"},
+	{"label": "Ranting", "url": "/unhinged-applications"},
 	{"label": "Resume", "url": "/resume"},
 	{"label": "Resume History", "url": "/resume-history"},
-	{"label": "Git Contrib", "url": "/contributions"},
+	{"label": "Git Log", "url": "/contributions"},
 	{"label": "Calendly", "url": "/calendly"}
 ]
