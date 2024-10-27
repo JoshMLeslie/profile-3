@@ -39,19 +39,45 @@
 	</head>
 
 	<body>
-		<div id="header-container">
-			<div
-				id="container-bg"
-				alt="Dr. Strangelove staring longingly into the distance"
-			></div>
-			<h1 class="header">Unhinged Responses<br />to Job Applications</h1>
-			<h2 class="header">
-				Or: Maybe someone will find this endearing and hire me
-			</h2>
+		<div id="content">
+			<div id="header-container">
+				<div
+					id="container-bg"
+					alt="Dr. Strangelove staring longingly into the distance"
+				></div>
+				<h1
+					class="header"
+					title="Who needs tumblr when you have your own website"
+				>
+					Unhinged Responses<br />to Job Apps & etc.
+				</h1>
+				<h2 class="header">
+					Or: Maybe someone will find this endearing and hire me
+				</h2>
+			</div>
+			<p>Click an img to zoom</p>
+			<div class="response-container">
+				<img
+					title="toddler or an elder??"
+					src="./assets/img/unhinged-app-imgs/three-to-fifteen.png"
+				/>
+				<p>2024 / 10 / 03</p>
+			</div>
+			<div class="response-container">
+				<img
+					title="how about... a cv?"
+					src="./assets/img/unhinged-app-imgs/short-skill-summary.png"
+				/>
+				<p>2024 / 10 / 26</p>
+			</div>
 		</div>
-		<div class="response-container">
-			<img src="./assets/img/unhinged-app-imgs/short-skill-summary.png" />
-			<p>2024 / 10 / 26</p>
-		</div>
+
+		<script>
+			document.querySelectorAll('.response-container img').forEach((el) => {
+				el.addEventListener('click', (e) => {
+					e.target.classList.toggle('zoom-img');
+				});
+			});
+		</script>
 	</body>
 </html>
