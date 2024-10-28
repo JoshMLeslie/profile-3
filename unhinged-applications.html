@@ -55,28 +55,53 @@
 					Or: Maybe someone will find this endearing and hire me
 				</h2>
 			</div>
-			<p>Click an img to zoom</p>
-			<div class="response-container">
-				<img
-					title="toddler or an elder??"
-					src="./assets/img/unhinged-app-imgs/three-to-fifteen.png"
-				/>
-				<p>2024 / 10 / 03</p>
-			</div>
-			<div class="response-container">
-				<img
-					title="how about... a cv?"
-					src="./assets/img/unhinged-app-imgs/short-skill-summary.png"
-				/>
-				<p>2024 / 10 / 26</p>
-			</div>
+			<p>Yes, I've submitted these. Click an img to zoom</p>
 		</div>
 
 		<script>
-			document.querySelectorAll('.response-container img').forEach((el) => {
-				el.addEventListener('click', (e) => {
-					e.target.classList.toggle('zoom-img');
+			/**
+			 * @typedef {{ filename: string, alt: string, date: string, format?: string }} ImageData
+			 */
+			/**
+			 * @type {ImageData[]}
+			 */
+			const data = [
+				{
+					filename: 'three-to-fifteen',
+					alt: 'toddler or an elder??',
+					date: '2024-10-03',
+				},
+				{
+					filename: 'short-skill-summary',
+					alt: 'how about... a cv?',
+					date: '2024-10-26',
+				},
+				{filename: '2024-10-28_1', alt: 'decode, hell', date: '2024-10-28'},
+				{
+					filename: '2024-10-28_2',
+					alt: "I'm the prettiest girl at the party",
+					date: '2024-10-28',
+				},
+			];
+			data.forEach((datum) => {
+				const container = document.createElement('div');
+				container.classList.add('response-container');
+
+				const img = document.createElement('img');
+				img.src = `./assets/img/unhinged-app-imgs/${datum.filename}.${
+					datum.format || 'png'
+				}`;
+				img.alt = datum.alt;
+				img.title = datum.alt;
+				img.addEventListener('click', () => {
+					img.classList.toggle('zoom-img');
 				});
+
+				const dateP = document.createElement('p');
+				dateP.textContent = datum.date;
+				container.appendChild(img);
+				container.appendChild(dateP);
+				document.querySelector('div#content').appendChild(container);
 			});
 		</script>
 	</body>
