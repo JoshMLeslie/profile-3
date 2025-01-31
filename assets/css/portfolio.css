@@ -8,13 +8,17 @@
 	margin: 2rem auto;
 }
 
+.portfolio-item-container {
+	display: flex;
+	gap: 8px;
+}
+
 a.portfolio-item {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
-	max-width: 800px;
-	max-height: 128px;
+	width: 128px;
+	height: 128px;
 	text-align: center;
 	opacity: 0.75;
 	transition: opacity 0.3s ease, transform 0.3s ease;
@@ -41,11 +45,6 @@ a.portfolio-item span {
 
 a.portfolio-item:hover span {
 	opacity: 1;
-}
-
-a.portfolio-item img {
-	width: 100%;
-	height: auto;
 }
 
 a.portfolio-item img.image-by-height {

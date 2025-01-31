@@ -5,25 +5,22 @@
 	},
 	{
 		"link": "https://linkedin.com/in/joshmleslie",
-		"imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/291px-LinkedIn_Logo.svg.png",
-		"imageAlt": "Linked In user profile",
-		"imgByHeight": true
+		"imageUrl": "/assets/img/linked-in-logo.svg",
+		"imageAlt": "Linked In user profile"
 	},
 	{
 		"link": "https://stackoverflow.com/users/9807140/josh-leslie",
-		"imageUrl": "https://stackoverflow.design/assets/img/logos/so/logo-stackoverflow.svg",
-		"imageAlt": "Stackoverflow user profile",
-		"imgByHeight": true
+		"imageUrl": "/assets/img/stackoverflow-logo.svg",
+		"imageAlt": "Stackoverflow user profile"
 	},
 	{
 		"link": "https://github.com/joshmleslie",
-		"imageUrl": "https://github.githubassets.com/assets/GitHub-Logo-ee398b662d42.png",
-		"imageAlt": "Github user profile",
-		"imgByHeight": true
+		"imageUrl": "/assets/img/github-logo.svg",
+		"imageAlt": "Github user profile"
 	},
 	{
 		"link": "https://gitlab.com/joshmleslie",
-		"imageUrl": "https://images.ctfassets.net/xz1dnu24egyd/1jFYOufBZ1ib2PLP9YI45r/5f67fe4a4b32a0ff5e012cb35e3272f3/gitlab-logo-100.svg",
+		"imageUrl": "/assets/img/gitlab-logo.svg",
 		"imageAlt": "Gitlab user profile"
 	},
 	{
@@ -32,20 +29,20 @@
 	},
 	{
 		"link": "https://opensourcemedicalsupplies.org",
-		"text": "Open Source Medical Supplies",
+		"text": "OSMS",
 		"imageUrl": "https://opensourcemedicalsupplies.org/wp-content/uploads/2020/06/library.jpg",
 		"imageAlt": "Open Source Medical Supplies"
 	},
 	{
 		"link": "https://www.newyorkfed.org/markets/desk-operations/repo",
-		"text": "Federal Reserve of New York City",
+		"text": "FR NYC",
 		"imageUrl": "https://www.newyorkfed.org/medialibrary/media/images/v4/markets/landing_page_photo/MarketsRepo-GettyImages-1159395935-300.jpg?sc_lang=en&h=372&w=600&la=en&hash=2559ED10ABB3EB8D03D80105E33D3B15",
 		"imageAlt": "Federal Reserve of New York City"
 	},
 	{
 		"link": "https://www.fashionphile.com",
-		"text": "Fashionphile Recommerce Platform",
-		"imageUrl": "assets/img/fp-logo.avif",
+		"text": "FP",
+		"imageUrl": "/assets/img/fp-logo.jpg",
 		"imageAlt": "Fashionphile logo"
 	},
 	{
@@ -54,21 +51,20 @@
 	},
 	{
 		"link": "https://joshmleslie.github.io/americas-high-speed-rail",
-		"text": "USA High-speed Rail Map",
+		"text": "HSR",
 		"imageUrl": "https://internationalbanker.com/wp-content/uploads/2023/09/High-Speed-Train.png",
 		"imageAlt": "High speed rail project banner"
 	},
 	{
 		"link": "http://wcc.joshmleslie.com",
-		"text": "World Clock Meeting Coordinator",
+		"text": "WCC",
 		"imageUrl": "https://image.shutterstock.com/image-vector/clock-on-map-world-lag-260nw-247162324.jpg",
 		"imageAlt": "Clock project banner"
 	},
 	{
 		"link": "https://stackblitz.com/@JoshMLeslie/collections/coherent",
-		"text": "Stackblitz Widgets",
-		"imageUrl": "https://stackblitz.com/_astro/stackblitz-logo-color.C8-mRlxl_ZM8j2i.svg",
-		"imageAlt": "Stackblitz examples",
-		"imgByHeight": true
+		"text": "Stackblitz",
+		"imageUrl": "/assets/img/stackblitz-logo.svg",
+		"imageAlt": "Stackblitz examples"
 	}
 ]

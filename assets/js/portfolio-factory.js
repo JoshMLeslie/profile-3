@@ -1,13 +1,16 @@
 const portfolioContainer = document.querySelector('.portfolio-container');
 
-const titleFactory = ({text}) => {
+const titleFactory = ({text}, itemContainer) => {
 	const title = document.createElement('h2');
 	title.textContent = text;
 	title.className = 'portfolio-title';
-	portfolioContainer.appendChild(title);
+	itemContainer.appendChild(title);
 };
 
-const portfolioItemFactory = ({link, text, imageUrl, imageAlt, imgByHeight}) => {
+const portfolioItemFactory = (
+	{link, text, imageUrl, imageAlt, imgByHeight},
+	itemContainer
+) => {
 	const portfolioItem = document.createElement('a');
 	portfolioItem.href = link;
 	portfolioItem.target = '_blank';
@@ -28,15 +31,29 @@ const portfolioItemFactory = ({link, text, imageUrl, imageAlt, imgByHeight}) => 
 
 	portfolioItem.appendChild(image);
 
-	portfolioContainer.appendChild(portfolioItem);
+	itemContainer.appendChild(portfolioItem);
 };
 
+function createItemContainer(item) {
+	const itemContainer = document.createElement('div');
+	itemContainer.id = item.text.replace(/\s/g, '-').toLowerCase();
+	itemContainer.classList.add('portfolio-item-container');
+	portfolioContainer.appendChild(itemContainer);
+	return itemContainer;
+}
+
 (function renderPortfolioItems() {
+	let itemContainer;
 	fetch('assets/json/portfolio-data.json')
 		.then((res) => res.json())
 		.then((data) => {
 			data.forEach((item) => {
-				item.isTitle ? titleFactory(item) : portfolioItemFactory(item);
+				if (item.isTitle) {
+					titleFactory(item, portfolioContainer);
+					itemContainer = createItemContainer(item);
+				} else {
+					portfolioItemFactory(item, itemContainer);
+				}
 			});
 		})
 		.catch((error) => {
